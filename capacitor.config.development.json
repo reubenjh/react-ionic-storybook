@@ -1,0 +1,14 @@
+{
+  "appId": "react-ionic-storybook",
+  "appName": "react-ionic-storybook",
+  "webDir": "build",
+  "npmClient": "yarn",
+  "bundledWebRuntime": false,
+  "hideLogs": true,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "backgroundColor": "#ffffff"
+}

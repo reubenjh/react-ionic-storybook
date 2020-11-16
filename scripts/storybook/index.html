@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to Storybook</title>
+    <script type="text/javascript" src="./sha1.js"></script>
+    <script type="text/javascript">
+      var http_request = new XMLHttpRequest()
+      function ajax(options) {
+        http_request.open('GET', options.url, true)
+        http_request.send(null)
+        http_request.onreadystatechange = function () {
+          if (http_request.readyState == 4) {
+            if (http_request.status == 200) {
+              window.location = options.url
+            }
+          }
+        }
+      }
+
+      function handleSubmit() {
+        const pwd = document.getElementById('password').value
+        let hash = pwd
+        hash = Sha1.hash(pwd)
+        const url = hash + '/index.html'
+
+        ajax({
+          url,
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label>Password</label>
+      <input type="password" name="password" id="password" />
+
+      <button type="submit" onclick="handleSubmit()">Submit</button>
+    </form>
+  </body>
+</html>

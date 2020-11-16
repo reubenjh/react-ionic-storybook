@@ -1,0 +1,95 @@
+{
+  "name": "react-ionic-storybook",
+  "description": "A boiletplate frontend app for iOS, Android, and Web.",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^2.4.2",
+    "@capacitor/core": "2.4.2",
+    "@capacitor/ios": "2.4.2",
+    "@emotion/core": "^10.0.35",
+    "@ionic/react": "^5.4.1",
+    "@ionic/react-router": "^5.4.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/luxon": "^1.25.0",
+    "@types/node": "^14.14.2",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/rimraf": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "adm-zip": "^0.4.16",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "i18next": "^19.8.2",
+    "luxon": "^1.25.0",
+    "mutationobserver-shim": "^0.3.7",
+    "prettier": "^2.1.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-i18next": "^11.7.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.3"
+  },
+  "resolutions": {
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "typescript": "^4.0.3",
+    "react": "17.0.1"
+  },
+  "scripts": {
+    "build:android": "node scripts/build:android.js",
+    "build:ios": "node scripts/build:ios.js",
+    "build:web": "node scripts/build:web.js",
+    "clean": "node scripts/clean.js",
+    "dev:android": "node scripts/dev:android.js",
+    "dev:ios": "node scripts/dev:ios.js",
+    "dev:web": "react-scripts start",
+    "eject": "react-scripts eject",
+    "install:android": "node scripts/install:android.js",
+    "install:ios": "node scripts/install:ios.js",
+    "lint": "eslint --ext .tsx,.ts src/",
+    "start": "yarn dev:web",
+    "test": "react-scripts test",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build:storybook": "node scripts/build:storybook.js",
+    "deploy:storybook": "sh scripts/storybook/git-storybook.sh"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@capacitor/cli": "2.4.2",
+    "@storybook/addon-actions": "^6.0.27",
+    "@storybook/addon-essentials": "^6.0.27",
+    "@storybook/addon-links": "^6.0.27",
+    "@storybook/node-logger": "^6.0.27",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.27",
+    "babel-loader": "^8.1.0",
+    "react-is": "^17.0.1"
+  }
+}
